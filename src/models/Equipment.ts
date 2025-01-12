@@ -1,17 +1,27 @@
+import { Staff } from "./Staff";
+import { Field } from "./Field";
+
 export class Equipment {
     equipmentId: string;
-    equipmentName: string;
-    equipmentType: string;
-    equipmentStatus: string;
-    staff : string;
-    field : string;
+    name: string;
+    type: string;
+    status: string;
+    assignedStaffDetails: Staff[];
+    assignedFieldDetails: Field[];
 
-    constructor(equipmentId: string, equipmentName: string, equipmentType: string, equipmentStatus: string, staff: string, field: string) {
+    constructor(
+        equipmentId: string,
+        name: string,
+        type: string,
+        status: string,
+        assignedStaffDetails: Staff[],
+        assignedFieldDetails: Field[]
+    ) {
         this.equipmentId = equipmentId;
-        this.equipmentName = equipmentName;
-        this.equipmentType = equipmentType;
-        this.equipmentStatus = equipmentStatus;
-        this.staff = staff;
-        this.field = field;
+        this.name = name;
+        this.type = type;
+        this.status = status;
+        this.assignedStaffDetails = assignedStaffDetails;
+        this.assignedFieldDetails = assignedFieldDetails;
     }
 }
