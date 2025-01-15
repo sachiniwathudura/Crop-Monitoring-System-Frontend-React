@@ -1,15 +1,15 @@
-export class User {
+export class Vehicle {
     vehicleCode : string;
-    licensePlateNumbr:string;
+    licensePlateNumber:string;
     vehicleCategory:string;
     fuelType:string;
     status:string;
     allocateStaffMember:string;
     remarks:string;
 
-    constructor(vehicleCode: string, licensePlateNumbr: string, vehicleCategory: string, fuelType: string, status: string, allocateStaffMember: string, remarks: string) {
+    constructor(vehicleCode: string, licensePlateNumber: string, vehicleCategory: string, fuelType: string, status: string, allocateStaffMember: string, remarks: string) {
         this.vehicleCode = vehicleCode;
-        this.licensePlateNumbr = licensePlateNumbr;
+        this.licensePlateNumber = licensePlateNumber;
         this.vehicleCategory = vehicleCategory;
         this.fuelType = fuelType;
         this.status = status;
