@@ -160,6 +160,7 @@
             import { useState } from "react";
             import { useDispatch, useSelector } from "react-redux";
             import { updateCrop, saveCrop, removeCrop } from "../reducers/CropSlice";
+            import "./css/pages.css"
 
             export function Crop() {
 
@@ -188,7 +189,7 @@
             <>
         {/* Main Content */}
             <div className="col-span-12 lg:col-span-10 p-4 fixed left-44 top-0 w-[calc(100%-176px)] h-screen p-4 overflow-y-auto">
-                <h1 className="text-2xl font-bold text-center my-4">Crop Management</h1>
+                <h1 className="text-4xl font-bold text-center my-4">Crop Management</h1>
 
                 <div className="flex justify-between items-center mb-3">
                     <input
@@ -248,7 +249,12 @@
             {/* Modal */}
             {isModalOpen && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-                    <div className="bg-white rounded-lg shadow-lg w-11/12 md:w-3/4 lg:w-1/2">
+                    <div className="rounded-lg shadow-lg w-11/12 md:w-3/4 lg:w-1/2 bg-transparent"
+                         style={{
+                             backgroundImage: "url('src/assets/images/eq1.png')",
+                             backgroundSize: "cover",
+                             backgroundPosition: "center",
+                         }}>
                         <div className="flex justify-between items-center px-4 py-2 border-b">
                             <h5 className="text-lg font-bold">Crop Details</h5>
                             <button
