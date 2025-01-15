@@ -1,11 +1,11 @@
 export class Staff{
-    staffId: string;
+    id: string;
     firstName: string;
     lastName: string;
     designation: string;
     gender: string;
     joinedDate: string;
-    dob: string;
+    DOB: string;
     address: string;
     contactNumber: string;
     email: string;
@@ -14,14 +14,14 @@ export class Staff{
     vehicle: string;
 
 
-    constructor(staffId: string, firstName: string, lastName: string, designation: string, gender: string, joinedDate: string, dob: string, address: string, contactNumber: string, email: string, role: string, field: string, vehicle: string) {
-        this.staffId = staffId;
+    constructor(id: string, firstName: string, lastName: string, designation: string, gender: string, joinedDate: string, DOB: string, address: string, contactNumber: string, email: string, role: string, field: string, vehicle: string) {
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.designation = designation;
         this.gender = gender;
         this.joinedDate = joinedDate;
-        this.dob = dob;
+        this.DOB = DOB;
         this.address = address;
         this.contactNumber = contactNumber;
         this.email = email;
