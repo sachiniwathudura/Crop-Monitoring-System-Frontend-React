@@ -1,55 +1,70 @@
-/*.custom-link{*/
-/*    @apply hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium;*/
-/*}*/
-
 .navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #7EC181; /* Dark background color for sidebar */
+    color: white;
+    width: 180px; /* Set a fixed width for the navbar */
+    padding: 20px;
     display: flex;
     flex-direction: column; /* Arrange items in a column */
-    align-items: flex-start; /* Align items to the start of the column */
-    background-color: #f8f9fa; /* Set a background color for the navbar */
-    /*padding: 10px;*/
-    width: 180px; /* Set a fixed width for the navbar */
-    height: 100vh; /* Full height for vertical alignment */
-    border-right: 1px solid #ddd; /* Optional: Add a border to separate the navbar */
-    position: fixed;
+    align-items: center; /* Center items horizontally */
+    justify-content: space-between; /* Add space between top, middle, and bottom */
 }
 
-.navbar .custom-link {
-    @apply hover:bg-green-700 px-3 py-2 rounded-md text-sm font-medium;
-    /*width: 100%; !* Make links take full width *!*/
-    /*text-align: left; !* Align text to the left *!*/
-    /*!*margin-bottom: 10px; !* Add space between links *!*!*/
-    /*color: #333; !* Set the text color *!*/
-    /*text-decoration: none; !* Remove underline from links *!*/
-    /*display: flex;*/
-    /*flex-direction: column; !* Arrange items in a column *!*/
-    /*align-items: flex-start; !* Align items to the start of the column *!*/
-    /*@apply hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium;*/
-    /*margin: 10px 20px; !* Add spacing between items *!*/
+.navbar .profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    margin-bottom: 10px; /* Space below the profile section */
+}
 
-    /*display: block;*/
-    /*padding: 8px;*/
-    /*font-weight: 700;*/
-    /*color: #0c0c0c;*/
-    /*text-decoration: none;*/
-    /*border-radius: 4px;*/
-    /*transition: background-color 0.3s ease;*/
-    /*text-align: center;*/
+.navbar .profile-section img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Make the image circular */
+    border: 2px solid white;
+    margin-bottom: 5px; /* Space between the image and the date/time */
+}
 
-    display: block;
-    /* padding-: 20px; */
-    /*padding-top: 20px;*/
-    /*padding-bottom: 20px;*/
-    padding: 20px 40px 20px 40px;
+.navbar .profile-section .date-time {
+    color: #15803D; /* Set text color */
+    text-align: center; /* Center-align the text */
+    font-size: 16px;
+    font-weight: bold;
+}
 
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    width: 100%; /* Full width for links */
+}
 
-    font-weight: 700;
-    color: #0c0c0c;
+.navbar li {
+    margin-bottom: 12px;
+    text-align: center; /* Center-align the links */
+}
+
+.custom-link {
     text-decoration: none;
+    color: black; /* Default font color */
+    font-weight: 400;
+    font-size: 14px;
+    padding: 5px;
+    display: block;
     border-radius: 4px;
-    transition: background-color 0.3s ease;
+    text-align: left;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+
+}
+.custom-link i {
+    margin-right: 8px;
 }
 
-.navbar .custom-link:hover {
-    color: white; /* Change text color on hover */
+.custom-link:hover {
+    background-color: #15803D; /* Hover background color (darker green shade) */
+    color: white; /* Hover font color */
 }
+
+
