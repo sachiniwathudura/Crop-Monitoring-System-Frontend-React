@@ -1,5 +1,5 @@
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=60&pause=1000&center=true&vCenter=true&color=D8BFD8&width=835&height=70&lines=Crop+Monitoring+System+Frontend+React" alt="pos" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=400&size=40&pause=1000&center=true&vCenter=true&color=D8BFD8&width=835&height=70&lines=Crop+Monitoring+System+Frontend+React" alt="pos" />
 </a>
 
 ## Project Overview
