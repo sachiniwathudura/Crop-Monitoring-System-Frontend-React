@@ -5,6 +5,7 @@ import staffSlice from "../reducers/StaffSlice";
 import vehicleSlice from "../reducers/VehicleSlice";
 import fieldSlice from "../reducers/FieldSlice";
 import monitoringLogSlice from "../reducers/MonitoringLogSlice";
+import authSlice from "../reducers/AuthSlice.tsx";
 
 const rootReducer = combineReducers({
     crops: cropSlice,
@@ -13,6 +14,7 @@ const rootReducer = combineReducers({
     vehicles: vehicleSlice,
     fields: fieldSlice,
     mLogs:monitoringLogSlice,
+    auth: authSlice,
 
     // Add other reducers (e.g., equipments, staff, vehicles) if needed.
 });
