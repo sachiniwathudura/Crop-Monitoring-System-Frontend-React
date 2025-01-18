@@ -171,8 +171,9 @@ export function Dashboard() {
                         <label htmlFor="search"> <i className="fas fa-search search-icon"></i></label>
                     </div>
                     <i className="fas fa-bell notification-icon"></i>
+
                     <div className="user">
-                        <img src="/src/assets/images/icons8-user-50.png" alt="profile pic" />
+                    <img src="/src/assets/images/icons8-user-50.png" alt="profile pic" />
                     </div>
                 </div>
                 {/* Main content */}
@@ -180,7 +181,7 @@ export function Dashboard() {
                     <div className="cards">
                         <div className="card">
                             <div className="card-content">
-                                <div className="number">10+</div>
+                                <div className="number">20+</div>
                                 <div className="card-name">Vehicles</div>
                             </div>
                             <div className="icon-box">
@@ -189,7 +190,7 @@ export function Dashboard() {
                         </div>
                         <div className="card">
                             <div className="card-content">
-                                <div className="number">100</div>
+                                <div className="number">200</div>
                                 <div className="card-name">Employee</div>
                             </div>
                             <div className="icon-box">
@@ -198,11 +199,20 @@ export function Dashboard() {
                         </div>
                         <div className="card">
                             <div className="card-content">
-                                <div className="number">50+</div>
+                                <div className="number">100+</div>
                                 <div className="card-name">Crops</div>
                             </div>
                             <div className="icon-box">
                                 <i className="fas fa-seedling field-icon"></i>
+                            </div>
+                        </div>
+                        <div className="card">
+                            <div className="card-content">
+                                <div className="number">80+</div>
+                                <div className="card-name">Equipments</div>
+                            </div>
+                            <div className="icon-box">
+                                <i className="fas fa-tools"></i>
                             </div>
                         </div>
                     </div>
