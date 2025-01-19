@@ -42,75 +42,78 @@ export function SignUp() {
   };
 
   return (
-    <div className="w-screen h-screen flex justify-center items-center flex-col text-gray-800 bg-white">
-      <div className="w-full max-w-[35rem] px-6 py-10 border-2 rounded-2xl bg-[#f5f5f5]/70 -mt-14">
-        <h1 className="text-4xl font-bold text-center mb-4 text-green-700">Sign Up</h1>
+    <div className="fixed inset-0 flex justify-center items-center flex-col text-gray-800 bg-black">
+      <div className="w-full max-w-[35rem] px-6 py-10 border-2 rounded-2xl bg-green-100 -mt-5 h-70%">
+        <h1 className="text-3xl font-semibold text-center text-green-800 px-3 pt-5 ">Welcome Back !</h1>
+        {/*<h2 className="text-2xl font-bold text-center text-green-800 px-3 ">Green Shadow (Pvt) Ltd</h2>*/}
 
         <form
-          onSubmit={handleSubmit}
-          className="flex flex-col justify-center items-center py-4 gap-3 mb-3"
+            onSubmit={handleSubmit}
+            className="flex flex-col justify-center items-center px-3 py-2 gap-3 mb-1 mt-1 mx-auto"
+
         >
           <FormField
-            title="Mobile"
-            name="mobile"
-            value={credentials.mobile}
-            handleInputChange={handleInputChange}
-            error={authState.error}
+              title="Mobile"
+              name="mobile"
+              value={credentials.mobile}
+              handleInputChange={handleInputChange}
+              error={authState.error}
           />
 
           <FormField
-            title="Name"
-            name="name"
-            value={credentials.name}
-            handleInputChange={handleInputChange}
-            error={authState.error}
+              title="Name"
+              name="name"
+              value={credentials.name}
+              handleInputChange={handleInputChange}
+              error={authState.error}
           />
 
           <FormField
-            title="Username"
-            name="username"
-            value={credentials.username}
-            handleInputChange={handleInputChange}
-            error={authState.error}
+              title="Username"
+              name="username"
+              value={credentials.username}
+              handleInputChange={handleInputChange}
+              error={authState.error}
           />
 
           <FormField
-            title="Password"
-            name="password"
-            value={credentials.password}
-            handleInputChange={handleInputChange}
-            error={authState.error}
+              title="Password"
+              name="password"
+              value={credentials.password}
+              handleInputChange={handleInputChange}
+              error={authState.error}
           />
 
           <FormField
-            title="Confirm Password"
-            name="cpassword"
-            id="cpassword"
-            value={credentials.cpassword}
-            handleInputChange={handleInputChange}
-            error={authState.error}
+              title="Confirm Password"
+              name="cpassword"
+              id="cpassword"
+              value={credentials.cpassword}
+              handleInputChange={handleInputChange}
+              error={authState.error}
           />
 
           {authState.error && (
-            <div className="text-red-500 text-center">
-              <p>{authState.error}</p>
-            </div>
+              <div className="text-red-500 text-center">
+                <p>{authState.error}</p>
+              </div>
           )}
 
-          <div className="flex justify-center mt-3 space-x-2 w-1/2 max-w-[20rem]">
+          <div className="flex   space-x-2 w-1/2 max-w-[440px]">
             <button
-              type="submit"
-              className="bg-green-500 w-full text-black-600 px-4 py-2 rounded-md hover:bg-green-700 hover:text-white focus:ring-2 focus:ring-green-900 text-lg"
+                type="submit"
+                className="bg-green-500 text-black-800 px-3 py-1 w-[440px] h-[35px] rounded-md text-align: center; hover:bg-green-700 hover:text-white
+        border-2"
             >
               Sign Up
             </button>
           </div>
         </form>
 
-        <div className="flex justify-center mt-4">
+        <div className="flex justify-center mt-2">
           <p>
             Already have an account?{" "}
-            <button className="text-green-600" onClick={navigateToSignIn}>
+            <button className="text-green-500 hover:text-black hover:bg-green-300" onClick={navigateToSignIn}>
               Sign In
             </button>
           </p>

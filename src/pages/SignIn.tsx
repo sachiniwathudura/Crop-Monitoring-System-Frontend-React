@@ -36,9 +36,10 @@ export function SignIn() {
   };
 
   return (
-    <div className="w-screen min-h-dvh flex justify-center items-center flex-col text-gray-800">
-      <div className="w-full max-w-[35rem] px-6 py-10 border-2 rounded-2xl bg-[#f5f5f5]/70 -mt-14">
-        <h1 className="text-4xl font-bold text-center mb-4">Sign In</h1>
+    <div className="w-screen min-h-dvh flex justify-center items-center flex-col text-gray-800 mt-7 fixed">
+      <div className="w-full max-w-[35rem] px-6 py-10 border-2 rounded-2xl bg-green-100 -mt-14">
+        <h2 className="text-4xl font-bold text-center text-green-800 --tw-shadow-color: #86efac mb-4">Green Shadow (Pvt) Ltd</h2>
+        <h3 className="text-2xl font-semibold text-black-500">Welcome..!</h3>
 
         <form
           onSubmit={handleSubmit}
@@ -69,7 +70,7 @@ export function SignIn() {
           <div className="flex justify-center mt-3 space-x-2 w-1/2 max-w-[20rem]">
             <button
               type="submit"
-              className="bg-blue-500 w-full text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:ring-2 focus:ring-blue-400 text-lg"
+              className="bg-green-500 w-full text-black px-4 py-2 rounded-md hover:bg-green-700 hover:text-white focus:ring-2 focus:ring-green-400 text-lg"
             >
               Sign In
             </button>
@@ -79,7 +80,7 @@ export function SignIn() {
         <div className="flex justify-center mt-4">
           <p>
             Don't have an account?{" "}
-            <button className="text-blue-600" onClick={navigateToSignUp}>
+            <button className="text-green-600 hover:bg-green-300 hover:text-black" onClick={navigateToSignUp}>
               Sign Up
             </button>
           </p>
