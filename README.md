@@ -32,4 +32,4 @@ The **Crop Monitoring System** is designed to help users effectively monitor and
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-🦇© 2024 All Right Reserved Created By Sachini Madhubhashini
+🦇© 2025 All Right Reserved Created By Sachini Madhubhashini
