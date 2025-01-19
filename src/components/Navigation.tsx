@@ -86,11 +86,11 @@ export function Navigation() {
                                         className="custom-link w-full cursor-pointer"
                                         onClick={handleLogout}
                                     >
-                                        <i className="fas fa-user"></i> Logout
+                                        <i className="fas fa-right-from-bracket"></i> Logout
                                     </div>
                                 ) : (
                                     <Link to="/login" className="custom-link">
-                                        <i className="fas fa-user"></i> Login
+                                        <i className="fas fa-right-from-bracket"></i> Login
                                     </Link>
                                 )}
                             </div>

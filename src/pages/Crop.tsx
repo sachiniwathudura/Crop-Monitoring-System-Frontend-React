@@ -55,7 +55,6 @@ import "./css/pages.css"
                         <th className="px-4 py-2 border">Scientific Name</th>
                         <th className="px-4 py-2 border">Category</th>
                         <th className="px-4 py-2 border">Season</th>
-                        <th className="px-4 py-2 border">Field Code</th>
                         <th className="px-4 py-2 border">Image</th>
                         <th className="px-4 py-2 border">Actions</th>
                     </tr>
@@ -71,7 +70,6 @@ import "./css/pages.css"
                             <td className="px-4 py-2 border">{crop.scientificName}</td>
                             <td className="px-4 py-2 border">{crop.category}</td>
                             <td className="px-4 py-2 border">{crop.cropSeason}</td>
-                            <td className="px-4 py-2 border">{crop.fieldCode}</td>
                             <td className="px-4 py-2 border">{crop.image ? crop.image.name : "No Image"}</td>
                             <td className="px-4 py-2 border">
                                 <button
@@ -92,12 +90,12 @@ import "./css/pages.css"
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
                     <div className="rounded-lg shadow-lg w-11/12 md:w-3/4 lg:w-1/2 bg-transparent"
                          style={{
-                             backgroundImage: "url('src/assets/images/eq1.png')",
+                             backgroundImage: "url('src/assets/images/i2.jpg')",
                              backgroundSize: "cover",
                              backgroundPosition: "center",
                          }}>
                         <div className="flex justify-between items-center px-4 py-2 border-b bg-green-200">
-                            <h5 className="text-lg text-gray-600 font-bold">Crop Details</h5>
+                            <h5 className="text-lg text-black font-bold">Crop Details</h5>
                             <button
                                 className="text-gray-500 hover:text-gray-700"
                                 onClick={closeModal}
@@ -200,38 +198,7 @@ import "./css/pages.css"
                                         />
                                     </div>
                                 </div>
-                                <div>
-                                    <label className="block font-medium">Log Codes:</label>
-                                    <div className="space-y-1">
-                                        <label>
-                                            <input
-                                                type="checkbox"
-                                                name="logCode"
-                                                value="logCode1"
-                                                className="mr-2"
-                                            />
-                                            Log Code 1
-                                        </label>
-                                        <label>
-                                            <input
-                                                type="checkbox"
-                                                name="logCode"
-                                                value="logCode2"
-                                                className="mr-2"
-                                            />
-                                            Log Code 2
-                                        </label>
-                                        <label>
-                                            <input
-                                                type="checkbox"
-                                                name="logCode"
-                                                value="logCode3"
-                                                className="mr-2"
-                                            />
-                                            Log Code 3
-                                        </label>
-                                    </div>
-                                </div>
+
                                 <div>
                                     <label htmlFor="cropImage" className="block font-medium">
                                         Image

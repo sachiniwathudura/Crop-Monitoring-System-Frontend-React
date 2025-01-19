@@ -100,8 +100,8 @@ export function MonitoringLog() {
             {isModalOpen && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
                     <div className="bg-white rounded-lg shadow-lg w-11/12 md:w-3/4 lg:w-1/2">
-                        <div className="flex justify-between items-center px-4 py-2 border-b">
-                            <h5 className="text-lg font-bold">Monitoring Log Details</h5>
+                        <div className="flex justify-between items-center px-4 py-2 border-b bg-green-200 ">
+                            <h5 className="text-lg text-black font-bold">Monitoring Log Details</h5>
                             <button
                                 className="text-gray-500 hover:text-gray-700"
                                 onClick={closeModal}
@@ -166,7 +166,7 @@ export function MonitoringLog() {
                                         </label>
                                         <input
                                             type="file"
-                                            className="form-input w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                                            className="block w-full text-gray-600 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-green-200 file:text-[#086568] hover:file:bg-green-300"
                                             id="observedImage"
                                             onChange={handleFileChange}
                                         />

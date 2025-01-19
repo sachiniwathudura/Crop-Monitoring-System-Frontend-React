@@ -116,7 +116,7 @@ export function Staff() {
                                  backgroundSize: "cover",
                                  backgroundPosition: "center",
                              }}>
-                        <div className="flex justify-between items-center px-4 py-2 border-b">
+                        <div className="flex justify-between items-center px-4 h-0 border-b">
                             <h5 className="text-lg font-bold">Staff Details</h5>
                             <button
                                 className="text-gray-500 hover:text-gray-700"

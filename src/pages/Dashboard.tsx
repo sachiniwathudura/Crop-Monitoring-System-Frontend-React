@@ -7,17 +7,17 @@ import "../pages/css/Dashboard.css"
 export function Dashboard() {
     // Create refs for the canvas elements
     const lineChartRef = useRef(null);
-    const doughnutChartRef = useRef(null);
+    const barChartRef = useRef(null);
     const lineChartInstance = useRef(null);
-    const doughnutChartInstance = useRef(null);
+    const barChartInstance = useRef(null);
 
     useEffect(() => {
         // Clean up existing charts if they exist
         if (lineChartInstance.current) {
             lineChartInstance.current.destroy();
         }
-        if (doughnutChartInstance.current) {
-            doughnutChartInstance.current.destroy();
+        if (barChartInstance.current) {
+            barChartInstance.current.destroy();
         }
 
         // Initialize Line Chart
@@ -45,80 +45,40 @@ export function Dashboard() {
                 },
             },
         });
+        // Initialize Bar Chart
+        const barCtx = barChartRef.current.getContext("2d");
 
-        // // Initialize Doughnut Chart
-        // const doughnutCtx = doughnutChartRef.current.getContext("2d");
-        // doughnutChartInstance.current = new Chart(doughnutCtx, {
-        //     type: "doughnut",
-        //     data: {
-        //         labels: ["Active Users", "Inactive Users", "Guests"],
-        //         datasets: [
-        //             {
-        //                 label: "System Data",
-        //                 data: [50, 30, 20], // Example data
-        //                 backgroundColor: ["#15803D", "#34D399", "#BBF7D0"], // Segment colors
-        //             },
-        //         ],
-        //     },
-        //     options: {
-        //         responsive: true,
-        //         plugins: {
-        //             legend: {
-        //                 position: 'right', // Move labels to the right side
-        //                 labels: {
-        //                     boxWidth: 20, // Adjust the size of the color box
-        //                     padding: 15, // Add spacing between legend items
-        //                     font: {
-        //                         size: 14, // Set font size for labels
-        //                     },
-        //                 },
-        //             },
-        //             tooltip: {
-        //                 enabled: true,
-        //             },
-        //         },
-        //     },
-        // });
-
-        // Initialize Doughnut Chart
-        const doughnutCtx = doughnutChartRef.current.getContext("2d");
-
-// Custom plugin to draw text in the center
+        // Custom plugin to draw text in the center (adjusted for Bar chart)
         const centerTextPlugin = {
-            id: 'centerText',
+            id: "centerText",
             beforeDraw: (chart) => {
                 const { ctx, chartArea } = chart;
                 const { width, height, left, top } = chartArea;
 
                 ctx.save();
-                ctx.font = 'bold 10px Arial'; // Set the font size and type
-                ctx.fillStyle = '#000'; // Set the text color
-                ctx.textAlign = 'center'; // Center the text horizontally
-
-                ctx.textBaseline = 'middle'; // Center the text vertically
+                ctx.font = "bold 10px Arial"; // Set the font size and type
+                ctx.fillStyle = "white"; // Set the text color
+                ctx.textAlign = "center"; // Center the text horizontally
+                ctx.textBaseline = "middle"; // Center the text vertically
 
                 const totalUsers = 100; // Replace with dynamic calculation if needed
-                // ctx.fillText(`Total Users`, left + width / 2, top + height / 2 - 10); // Adjust the position
-                // ctx.fillText(`${totalUsers}`, left + width / 2, top + height / 2 + 10); // Add another line if needed
-                // ctx.restore();
-                // Calculate center position
                 const centerX = left + width / 2; // Center x-coordinate
                 const centerY = top + height / 2; // Center y-coordinate
-                ctx.fillText(`Total Users`, centerX, centerY - 10); // Adjust the position
                 ctx.fillText(`${totalUsers}`, centerX, centerY + 10); // Add another line if needed
                 ctx.restore();
             },
         };
 
-        doughnutChartInstance.current = new Chart(doughnutCtx, {
-            type: "doughnut",
+        barChartInstance.current = new Chart(barCtx, {
+            type: "bar", // Change type to 'bar'
             data: {
                 labels: ["Active Users", "Inactive Users", "Guests"],
                 datasets: [
                     {
                         label: "System Data",
                         data: [50, 30, 20], // Example data
-                        backgroundColor: ["#15803D", "#34D399", "#BBF7D0"], // Segment colors
+                        backgroundColor: ["#15803D", "#34D399", "#BBF7D0"], // Bar colors
+                        borderWidth: 1,
                     },
                 ],
             },
@@ -126,7 +86,7 @@ export function Dashboard() {
                 responsive: true,
                 plugins: {
                     legend: {
-                        position: 'right', // Move labels to the right side
+                        position: "top", // Move legend to the top
                         labels: {
                             boxWidth: 20, // Adjust the size of the color box
                             padding: 15, // Add spacing between legend items
@@ -139,6 +99,32 @@ export function Dashboard() {
                         enabled: true,
                     },
                 },
+                scales: {
+                    x: {
+                        grid: {
+                            display: false, // Hide grid lines on the x-axis
+                        },
+                        title: {
+                            display: true,
+                            text: "User Types", // Label for the x-axis
+                            font: {
+                                size: 16,
+                                weight: "bold",
+                            },
+                        },
+                    },
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: "Number of Users", // Label for the y-axis
+                            font: {
+                                size: 16,
+                                weight: "bold",
+                            },
+                        },
+                    },
+                },
             },
             plugins: [centerTextPlugin], // Add the custom plugin here
         });
@@ -149,8 +135,8 @@ export function Dashboard() {
             if (lineChartInstance.current) {
                 lineChartInstance.current.destroy();
             }
-            if (doughnutChartInstance.current) {
-                doughnutChartInstance.current.destroy();
+            if (barChartInstance.current) {
+                barChartInstance.current.destroy();
             }
         };
     }, []);
@@ -180,7 +166,7 @@ export function Dashboard() {
                 <div className="main">
                     <div className="cards">
                         <div className="card">
-                            <div className="card-content">
+                            <div className="card-content ml-8">
                                 <div className="number">20+</div>
                                 <div className="card-name">Vehicles</div>
                             </div>
@@ -189,7 +175,7 @@ export function Dashboard() {
                             </div>
                         </div>
                         <div className="card">
-                            <div className="card-content">
+                            <div className="card-content ml-8">
                                 <div className="number">200</div>
                                 <div className="card-name">Employee</div>
                             </div>
@@ -198,7 +184,7 @@ export function Dashboard() {
                             </div>
                         </div>
                         <div className="card">
-                            <div className="card-content">
+                            <div className="card-content ml-8">
                                 <div className="number">100+</div>
                                 <div className="card-name">Crops</div>
                             </div>
@@ -207,7 +193,7 @@ export function Dashboard() {
                             </div>
                         </div>
                         <div className="card">
-                            <div className="card-content">
+                            <div className="card-content ml-8">
                                 <div className="number">80+</div>
                                 <div className="card-name">Equipments</div>
                             </div>
@@ -221,9 +207,9 @@ export function Dashboard() {
                             <h2>Growing speed (past 6 months)</h2>
                             <canvas ref={lineChartRef} id="lineChart"></canvas>
                         </div>
-                        <div className="chart" id="doughnut-chart">
+                        <div className="chart" id="bar-chart">
                             <h2>System Data</h2>
-                            <canvas ref={doughnutChartRef} id="doughnut" className="chart-doughnut"></canvas>
+                            <canvas ref={barChartRef} id="bart" className="bar-doughnut"></canvas>
                         </div>
                     </div>
                 </div>

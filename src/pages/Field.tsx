@@ -61,6 +61,7 @@ export function Field() {
                         <th className="px-4 py-2 border">Select</th>
                         <th className="px-4 py-2 border">Field Code</th>
                         <th className="px-4 py-2 border">Field Name</th>
+                        <th className="px-4 py-2 border">Field Image</th>
                         <th className="px-4 py-2 border">Location</th>
                         <th className="px-4 py-2 border">Size</th>
                         <th className="px-4 py-2 border">Actions</th>
@@ -98,8 +99,8 @@ export function Field() {
                              backgroundSize: "cover",
                              backgroundPosition: "center",
                          }}>
-                        <div className="flex justify-between items-center px-4 py-2 border-b">
-                            <h5 className="text-lg font-bold">Field Details</h5>
+                        <div className="flex justify-between items-center px-4 py-2 border-b bg-green-200">
+                            <h5 className="text-lg text-black font-bold">Field Details</h5>
                             <button className="text-gray-500 hover:text-gray-700" onClick={closeModal}>
                                 &times;
                             </button>

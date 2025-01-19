@@ -53,47 +53,6 @@ export function Vehicle() {
                     </button>
                 </div>
 
-                {/*<table className="table-auto w-full border border-gray-300">*/}
-                {/*    <thead className="bg-gray-200 text-green-700">*/}
-                {/*    <tr>*/}
-                {/*        <tr>*/}
-                {/*            <th className="px-4 py-2 border">Select</th>*/}
-                {/*            <th className="px-4 py-2 border">Vehicle Code</th>*/}
-                {/*            <th className="px-4 py-2 border">License Plate Number</th>*/}
-                {/*            <th className="px-4 py-2 border">Vehicle Category</th>*/}
-                {/*            <th className="px-4 py-2 border">Fuel Type</th>*/}
-                {/*            <th className="px-4 py-2 border">Status</th>*/}
-                {/*            <th className="px-4 py-2 border">Allocate Staff Member</th>*/}
-                {/*            <th className="px-4 py-2 border">Remarks</th>*/}
-                {/*            <th className="px-4 py-2 border">Actions</th>*/}
-                {/*        </tr>*/}
-                {/*    </tr>*/}
-                {/*    </thead>*/}
-                {/*    <tbody>*/}
-                {/*    {vehicles.map((vehicle, index) => (*/}
-                {/*        <tr key={index}>*/}
-                {/*            <td className="px-4 py-2 border">*/}
-                {/*                <input type="checkbox"/>*/}
-                {/*            </td>*/}
-                {/*            <td className="px-4 py-2 border">{vehicle.vehicleCode}</td>*/}
-                {/*            <td className="px-4 py-2 border">{vehicle.licensePlateNumber}</td>*/}
-                {/*            <td className="px-4 py-2 border">{vehicle.vehicleCategory}</td>*/}
-                {/*            <td className="px-4 py-2 border">{vehicle.fuelType}</td>*/}
-                {/*            <td className="px-4 py-2 border">{vehicle.status}</td>*/}
-                {/*            <td className="px-4 py-2 border">{vehicle.allocateStaffMember}</td>*/}
-                {/*            <td className="px-4 py-2 border">{vehicle.remarks}</td>*/}
-                {/*            <td className="px-4 py-2 border">*/}
-                {/*                <button*/}
-                {/*                    className="text-red-500"*/}
-                {/*                    onClick={() => dispatch(deleteVehicle(vehicle.vehicleCode))}*/}
-                {/*                >*/}
-                {/*                    Delete*/}
-                {/*                </button>*/}
-                {/*            </td>*/}
-                {/*        </tr>*/}
-                {/*    ))}*/}
-                {/*    </tbody>*/}
-                {/*</table>*/}
                 <table className="min-w-full  border">
                     <thead className="bg-gray-200 text-green-700">
                     <tr>
@@ -139,8 +98,8 @@ export function Vehicle() {
             {isModalOpen && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
                     <div className="bg-white rounded-lg shadow-lg w-11/12 md:w-3/4 lg:w-1/2">
-                        <div className="flex justify-between items-center px-4 py-2 border-b">
-                            <h5 className="text-lg font-bold">Vehicle Details</h5>
+                        <div className="flex justify-between items-center px-4 py-2 border-b bg-green-200">
+                            <h5 className="text-lg text-black font-bold">Vehicle Details</h5>
                             <button className="text-gray-500 hover:text-gray-700" onClick={closeModal}>
                                 &times;
                             </button>

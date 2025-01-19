@@ -35,7 +35,7 @@ const authSlice = createSlice({
         // For now, just a mock login
         if (
           action.payload.username === "user" &&
-          action.payload.password === "password"
+          action.payload.password === "123"
         ) {
           localStorage.setItem("token", "mock_token");
           state.isAuthenticated = true;

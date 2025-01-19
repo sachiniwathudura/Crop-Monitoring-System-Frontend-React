@@ -21,7 +21,7 @@ const FormField = ({
                    }: FormFieldProps) => {
   return (
       <div className="px-5 w-full max-w-[30rem] flex flex-col items-start my-1">
-        <label htmlFor={name ? name : id} className="font-medium text-gray-800">
+        <label htmlFor={name ? name : id} className="font-medium text-gray-800 text-15px">
           {title}
         </label>
         <input
@@ -31,12 +31,11 @@ const FormField = ({
             placeholder={placeholder}
             value={value}
             onChange={handleInputChange}
-            className={`w-full bg-gray-300/50
-        border-2 rounded-md 
-        px-4 py-2 ${
+            className={`w-[440px] h-[30px] bg-white border-2 border-black-400 rounded-md 
+        px-2 py-2  ${
                 error ? "border-red-600 focus:border-transparent" : "border-gray-400"
             } 
-        focus:ring-2 focus:ring-green-700 focus:outline-none`}
+        focus:ring-2 focus:ring-green-500 focus:outline-none placeholder:text-sm`}
         />
       </div>
   );
